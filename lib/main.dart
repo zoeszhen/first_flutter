@@ -10,12 +10,12 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  var questionIndex = 0;
-  void updateIndex() {
+  var _questionIndex = 0;
+  void _updateIndex() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   Widget build(context) {
@@ -28,11 +28,11 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            Text(questions.elementAt(questionIndex)),
-            RaisedButton(child: Text('Text 1'), onPressed: updateIndex),
-            RaisedButton(child: Text('Text 2'), onPressed: updateIndex),
-            RaisedButton(child: Text('Text 3'), onPressed: updateIndex),
-            RaisedButton(child: Text('Text 4'), onPressed: updateIndex),
+            Text(questions.elementAt(_questionIndex)),
+            RaisedButton(child: Text('Text 1'), onPressed: _updateIndex),
+            RaisedButton(child: Text('Text 2'), onPressed: _updateIndex),
+            RaisedButton(child: Text('Text 3'), onPressed: _updateIndex),
+            RaisedButton(child: Text('Text 4'), onPressed: _updateIndex),
           ],
         ),
       ),
